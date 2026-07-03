@@ -1,0 +1,15 @@
+1. lsof
+The lsof command displayed open files and the processes currently using them.
+
+2. File Descriptors
+The /proc/self/fd directory showed descriptors 0, 1 and 2, all linked to the terminal device.
+
+3. Output Redirection
+The > operator saved command output into a file instead of displaying it on screen.
+
+4. Error Redirection
+The 2> operator saved the error message from a failed command into a separate file.
+
+5. Resource Limits
+The ulimit command displayed operating system limits such as open files and memory usage.
+

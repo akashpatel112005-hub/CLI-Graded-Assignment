@@ -1,0 +1,14 @@
+1. id
+This command displayed the current user's identity information including UID, GID, and group memberships. It confirmed the account is correctly configured within the container.
+
+2. echo $SHELL
+This command displayed the active shell being used, which was /bin/bash. This confirms the default command interpreter for the session.
+
+3. pwd
+This command displayed the current working directory, confirming the terminal was correctly positioned inside the Q1 folder.
+
+4. ls -la
+This command displayed all files, folders, and hidden files in the current directory, useful for verifying the workspace state.
+
+5. ping -c 4 google.com
+This command tested internet connectivity. It showed 100% packet loss because ICMP (ping) traffic is blocked by the Codespaces network sandbox, even though the container has actual internet access for other protocols like HTTP.

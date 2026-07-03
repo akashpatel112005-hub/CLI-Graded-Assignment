@@ -1,0 +1,14 @@
+1. mkdir
+This command created the ProjectWorkspace folder along with its Documents and Reports subfolders, setting up the required directory structure.
+
+2. ls -ld
+This command displayed the permissions and ownership of ProjectWorkspace before and after modification, confirming default permissions were drwxrwxrwx.
+
+3. chmod 700
+This command restricted access to the directory so only the owner has read, write, and execute permissions. The updated permission string was drwx------.
+
+4. umask
+This command displayed the default permission mask (0022), which determines the default permissions assigned to new files and directories.
+
+5. Ownership
+The ls -ld output confirmed that the current user (codespace) owns the directory and controls access to it.

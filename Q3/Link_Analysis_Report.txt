@@ -1,0 +1,24 @@
+File System and Link Analysis Report
+
+1. Inode Numbers
+The ls -li command showed inode numbers. original.txt and hardlink.txt shared the same inode (1310803), while symlink.txt had a different inode (1310806).
+
+2. Hard Link vs Symbolic Link
+Hard Link:
+- Shares the same inode as the original file.
+- Points directly to the file data.
+- Continues to work even if the original filename is deleted.
+
+Symbolic Link:
+- Has its own inode.
+- Stores a reference to the file path, not the data itself.
+- Becomes broken if the target file is removed.
+
+3. Effect of Deleting the Original File
+After deleting original.txt, hardlink.txt still worked and displayed the file content correctly. symlink.txt became broken and returned "No such file or directory".
+
+4. Metadata
+The stat command was used to observe permissions, ownership, file size, and timestamps for all three files.
+
+5. Conclusion
+Hard links behave like additional names for the same underlying file data, so the data survives as long as one link remains. Symbolic links behave like shortcuts to a file path, so they break once the target is removed.

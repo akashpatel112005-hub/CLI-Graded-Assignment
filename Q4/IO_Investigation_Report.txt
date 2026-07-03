@@ -1,0 +1,16 @@
+File Access and I/O Investigation Report
+
+1. Open Files
+The lsof command was used to identify open files and the processes using them, such as docker-in and sh, along with their file descriptors and paths.
+
+2. File Descriptors
+The /proc/self/fd directory showed file descriptors for the current shell. Descriptors 0, 1, and 2 pointed to /dev/pts/0, confirming standard input, output, and error are connected to the terminal.
+
+3. Output and Error Redirection
+The > operator redirected the output "Linux I/O Test" into output.txt. The 2> operator redirected the error message from a failed ls command into error.txt.
+
+4. Resource Limits
+The ulimit -a command displayed system resource limits, including open files (524288), max locked memory (8192 KB), and stack size (8192 KB).
+
+5. Linux I/O
+Linux uses file descriptors to manage input and output streams. Redirection operators send those streams to files instead of the terminal, which is useful for logging and error handling.

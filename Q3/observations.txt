@@ -1,0 +1,14 @@
+1. File Creation
+original.txt was created to serve as the source file for the link experiment.
+
+2. Hard Link
+hardlink.txt was created using ln, and it shared the same inode number as original.txt.
+
+3. Symbolic Link
+symlink.txt was created using ln -s, and it had its own separate inode pointing to the original file's path.
+
+4. Metadata
+The stat command displayed inode numbers, permissions, and timestamps for all three files, confirming the differences between them.
+
+5. File Deletion Test
+Deleting original.txt broke symlink.txt but did not affect hardlink.txt, confirming that hard links keep data accessible while symbolic links depend on the original path existing.

@@ -1,0 +1,19 @@
+Storage Health Assessment Report
+
+1. Available Storage Devices
+The lsblk command displayed block devices and partition information.
+
+2. Mounted File Systems
+The df -h command displayed mounted file systems, sizes and usage. The /workspaces filesystem showed 32G total, with 9.7G used and 21G free (33% usage).
+
+3. Disk Usage
+The du -sh command summarized the storage used by the home directory, which was 268M.
+
+4. Inode Utilization
+The df -i command displayed inode usage statistics across mounted filesystems, showing 10% inode usage on the workspaces filesystem.
+
+5. Storage Health
+The storage system appeared operational and accessible, with sufficient free space and inode availability.
+
+6. Recommendations
+Remove unnecessary files, archive old data, and monitor disk and inode usage regularly.

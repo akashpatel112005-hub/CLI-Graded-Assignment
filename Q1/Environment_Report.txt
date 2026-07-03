@@ -1,0 +1,16 @@
+Environment Verification Report
+
+1. User Identity
+The id command was used to display user and group information. Output showed uid=1000(codespace), gid=1000(codespace), and group memberships including docker, sudo-related groups, and development tool groups.
+
+2. Active Shell
+The echo $SHELL command displayed the active shell as /bin/bash.
+
+3. Current Directory
+The pwd command displayed the current working directory as /workspaces/CLI-Graded-Assignment/Q1.
+
+4. Directory Listing
+The ls -la command displayed files and directories in the workspace, including hidden files.
+
+5. Network Verification
+The ping command was executed but showed 100% packet loss due to ICMP being blocked in the Codespaces network sandbox. This is expected behavior in cloud container environments and does not indicate a loss of actual internet connectivity.
