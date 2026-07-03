@@ -1,15 +1,17 @@
 1. lsblk
-The lsblk command displayed storage devices and partitions.
+This command displayed the storage devices and partitions available on the system. It showed the root filesystem device and its size, confirming the container's virtual disk layout.
 
 2. df -h
-The df -h command displayed mounted file systems and usage.
+This command displayed all mounted filesystems along with their total size, used space, available space, and usage percentage. The root filesystem showed usage well within safe limits, indicating no immediate storage pressure.
 
 3. du -sh
-The du -sh command summarized disk usage for the home directory.
+This command summarized the total disk usage of the home directory in human-readable form. This helps identify how much space the current project/workspace is consuming.
 
 4. df -i
-The df -i command displayed inode usage.
+This command displayed inode usage statistics for each mounted filesystem. Inode usage remained low, meaning there is no risk of running out of inodes even if many small files are created later.
 
-5. Storage Assessment
-The storage commands helped check disk space and inode availability.
+5. vi Storage_Assessment_Report.txt
+Used the vi editor to create the final storage assessment report. Entered insert mode with 'i', typed the report content covering devices, filesystems, disk usage, inode usage, and recommendations, then saved and exited using ':wq'.
 
+6. Storage Assessment Summary
+Overall, the storage commands confirmed the system has adequate disk space and inode availability for deploying a new application server. Recommendations include monitoring disk usage periodically and cleaning up unused files to prevent future space issues.
